@@ -17,4 +17,4 @@ def predict():
     return render_template('index.html', prediction_text=f'A house with {rooms} rooms per dwelling and located {distance} km to employment centers has a value of ${output}K')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, port=5000, host='0.0.0.0')
