@@ -16,7 +16,7 @@ def predict():
     distance = int(request.form['distance'])
     prediction = model.predict([[rooms, distance]])
     output = round(prediction[0], 2)
-    return render_template('index.html', prediction_text=f'A house with {rooms} rooms per dwelling and located {distance} km to employment centers has a value of ${output}K')
+    return render_template('index.html', prediction_text=f'From host {my_name}: A house with {rooms} rooms per dwelling and located {distance} km to employment centers has a value of ${output}K')
 
 @app.route("/predict_id", methods=['POST'])
 def predict_id():
